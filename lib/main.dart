@@ -1,14 +1,49 @@
 import 'package:flutter/material.dart';
 import 'global.dart';
-var tr = {
-  '/': (BuildContext context) => MyHomePage(title: '最初のページ'),
-  '/a': (BuildContext context) => MyHomePage(title: 'ルートA'),
-  '/b': (BuildContext context) => MyHomePage(title: 'ルートB'),
-};
+
 
 void main() {
-  runApp(MyApp());
+  runApp(App());
 }
+
+
+class App extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder(
+      future: Future.delayed(Duration(seconds: 3)),
+      builder: (context, AsyncSnapshot snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return MaterialApp(home: Splash());
+        } else {
+          return MaterialApp(
+            //home: Scaffold(body: Center(child: Text('ここでアプリがロードされました!'))),
+            home: Scaffold(body: MyApp()),
+          );
+        }
+      },
+    );
+  }
+}
+
+
+class Splash extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Center(
+        child: Icon(
+          Icons.apartment_outlined,
+          size: MediaQuery.of(context).size.width * 0.785,
+        ),
+      ),
+    );
+  }
+}
+
+
+
+
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
