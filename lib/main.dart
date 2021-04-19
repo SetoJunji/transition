@@ -17,8 +17,8 @@ class App extends StatelessWidget {
           return MaterialApp(home: Splash());
         } else {
           return MaterialApp(
-            home: Scaffold(body: Center(child: Text('姜維も出して色変えてみたい'))),
-            //home: Scaffold(body: MyApp()),
+            //home: Scaffold(body: Center(child: Text('姜維も出して色変えてみたい'))),
+            home: Scaffold(body: MyApp()),
           );
         }
       },
