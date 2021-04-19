@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'global.dart';
 var tr = {
   '/': (BuildContext context) => MyHomePage(title: '最初のページ'),
   '/a': (BuildContext context) => MyHomePage(title: 'ルートA'),
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
-      routes: tr,
+      routes: routeMap,
       //home: MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
