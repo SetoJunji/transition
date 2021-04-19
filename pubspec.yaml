@@ -41,5 +41,5 @@ flutter:
   uses-material-design: true
 
 flutter_native_splash:
-  image: "images/icon.jpg"
-  color: "#F7F01A"
+  image: "images/usagi.png"
+  color: "#FFFFFF"
