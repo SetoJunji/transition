@@ -3,6 +3,9 @@ import 'global.dart';
 
 //アイコンを変えてみたかった...
 void main() {
+  for(var i=0;i<30;i++){il[i] = i+1;}
+  il.shuffle();
+  //for(var i=0;i<30;i++){print(il[i]);}
   runApp(App());
 }
 
@@ -71,7 +74,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-      Navigator.of(context).pushNamed('/a');
+      funTestTest = goToTest(context);//この時点でのコンテクストに何の意味が有るのか?
+      funTestret = goToRes(context);
+      funTest = goToHome(context);
+      funTest();
+      //Navigator.of(context).pushNamed('/a');
       _counter++;
     });
   }

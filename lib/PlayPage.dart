@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:transition/global.dart';
 
 
 class PlayPage extends StatelessWidget {
@@ -22,7 +23,7 @@ class _HomePage2State extends State<HomePage2> {
       appBar: AppBar(
         title: Text('プレイ画面'),
       ),
-      body: Center(child:Text('タイマーとかボタンとかあれこれ')),
+      body: homeButton(),
     );
   }
 }

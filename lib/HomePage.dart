@@ -31,7 +31,8 @@ Row testRow(){
 }
 
 Column testCol(){
-  Column x = Column(children: [testRow(),testRow(),testRow(),testRow(),testRow(),testRow(),]);
+  //Column x = Column(children: [testRow(),testRow(),testRow(),testRow(),testRow(),testRow(),]);
+  Column x = Column(children: bll());
   return x;
 }
 
@@ -58,6 +59,6 @@ class _HomePageFulState extends State<HomePageFul> {
 class TestPage extends StatelessWidget{
   @override
   Widget build(BuildContext context){
-    return Scaffold(body: Container(child: Text('これは表示されるのか?'),),);
+    return Scaffold(body:homeButton());
   }
 }
